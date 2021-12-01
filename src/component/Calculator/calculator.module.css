@@ -1,0 +1,117 @@
+.calculator{
+  display: grid;
+  width: 600px;
+  height: 600px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows:  repeat(5, 1fr);
+  margin: 0 auto;
+}
+.calculator>span{
+  border: 1px solid #F00;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+  padding: 25px;
+  background-color: #FFF;
+  box-shadow: inset 2px 2px 3px 3px rgba(0, 0, 0, 0.15);
+  transition: all 0.4s ease;
+}
+.calculator>span:hover{
+  background-color: #F5F5F6;
+}
+/*.calculator>span:nth-child(3n+1){
+  background-color: #444;
+}
+.calculator>span:nth-child(3n+2){
+  background-color: #999;
+}
+.calculator>span:nth-child(3n){
+  background-color: #CCC;
+}*/
+.calculator>span.itemdisp{
+  justify-content: right;
+}
+.itemdisp{
+  
+  grid-column-start: 1;
+  grid-column-end: 5;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+.itemclear{
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+.itemplus{}
+.itemminus{}
+.itemmult{}
+.itemdiv{}
+.itemeq{
+  grid-column-start: 4;
+  grid-column-end: 5;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+.item1{
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 3;
+  grid-row-end: 4;
+}
+.item2{
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 3;
+  grid-row-end: 4;
+}
+.item3{
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 3;
+  grid-row-end: 4;
+}
+.item4{
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 4;
+  grid-row-end: 5;
+}
+.item5{
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 4;
+  grid-row-end: 5;
+}
+.item6{
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 4;
+  grid-row-end: 5;
+}
+.item7{
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 5;
+  grid-row-end: 6;
+}
+.item8{
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 5;
+  grid-row-end: 6;
+}
+.item9{
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 5;
+  grid-row-end: 6;
+}
+.item0{
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}

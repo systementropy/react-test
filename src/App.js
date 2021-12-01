@@ -1,28 +1,24 @@
 import React from 'react';
-import axios from 'axios';
-import Input from './component/input.js'
-import List from './component/list.js'
+
+import SearchAhead from './component/SearchAhead/SearchAhead'
+import Calculator from './component/Calculator/Calculator'
 
 function App() {
-  const [text, setText] = React.useState("")
-  const [data, setData] = React.useState([])
-
-  React.useEffect(() => {
-    if(text.length>=3){
-      axios.get("https://searchcode.com/api/codesearch_I/?q="+text)
-        .then((response)=>{setData(response.data.results)})
-    }
-  },[text])
-
-  const resetHandler = () => {
-    setText("")
-    setData([])
-  }
+  const [appToShow, setAppToShow] = React.useState("")
+  
   return (
     <div className="App">
-      <Input text={text} textChange={setText} reset={resetHandler}/>
-      <p>{text}</p>
-      <List data={data}/>
+      <ul>
+        <button onClick={(e) =>setAppToShow('search-ahead')} >Search Ahead</button>
+        <button onClick={(e) =>setAppToShow('calculator')} >Calculator</button>
+        <button onClick={(e) => setAppToShow('xyz')} >Some Things</button>
+        <button onClick={(e) => setAppToShow('xyz')} >Some Things</button>
+        <button onClick={(e) => setAppToShow('xyz')} >Some Things</button>
+        <button onClick={(e) => setAppToShow('xyz')} >Some Things</button>
+      </ul>
+      {appToShow==="search-ahead"?<SearchAhead />:null}
+      {appToShow==="calculator"?<Calculator />:null}
+      
     </div>
   );
 }
